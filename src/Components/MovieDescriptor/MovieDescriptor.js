@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Spinner } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import MovieHeader from './MovieHeader';
 
@@ -24,7 +24,7 @@ const MovieDescriptor = () => {
             <MovieHeader></MovieHeader>
             {
                 (isLoading === false) &&
-                <div className='d-flex flex-sm-column flex-md-row'>
+                <div className='d-flex flex-column flex-md-row'>
                     <div id="image" className="me-2">
                         {
                             (image) &&
@@ -33,9 +33,9 @@ const MovieDescriptor = () => {
                     </div>
                     <div id="description" className='container'>
                         <div style={{textJustify:'justify'}} className='container'>
-                        {title}({rating})
-                        <br />
-                        {release_date.split('-')[0]}|{runtime}
+                        <p><span style={{fontWeight:'bold'}}>{title}</span> <span className='text-danger'>({rating})</span></p>
+                        
+                        <span className='text-success'>{release_date.split('-')[0]}</span> | {runtime} mins
                         <br />
                         {overview}
                         </div>
@@ -43,6 +43,12 @@ const MovieDescriptor = () => {
                     </div>
                 </div>
         
+            }
+            {
+                (isLoading===true)&&
+                <div className='text-center'>
+                    <Spinner animation="border" />
+                </div>
             }
             </div>
     );

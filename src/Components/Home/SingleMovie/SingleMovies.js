@@ -20,11 +20,11 @@ const SingleMovies = (props) => {
                 }
                 <Card.Body>
                     <Card.Title className='d-flex justify-content-between align-items-center mb-0'>
-                        <p style={{fontSize:'12px',textJustify:'left'}}>{title}</p>
-                        <h6>{rating}</h6>
+                        <p style={{fontSize:'12px',textJustify:'left'}} className='text-success'>{title}</p>
+                        <h6 className='text-danger'>{rating}</h6>
                     </Card.Title>
-                    <Card.Text>
-                        {overview.substr(0,20)}<span>[...]</span>
+                    <Card.Text style={{textAlign:'justify'}}>
+                        {overview.substr(0,60)}<span>[...]</span>
                     </Card.Text>
                 </Card.Body>
             </Card>

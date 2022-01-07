@@ -8,7 +8,7 @@ const MovieHeader = (props) => {
     return (
         <Navbar bg="" expand="lg" className="container py-3">
             <Container>
-            <Navbar.Brand>Movie Details</Navbar.Brand>
+            <Navbar.Brand as={Link} to="/home" className='text-success'>Movie Details</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
            
                 <Navbar.Collapse id="navbarScroll">
