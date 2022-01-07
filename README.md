@@ -2,5 +2,5 @@
 
 ##Used Technology
 
--- REDUX for state management
--- React Router
+- REDUX for state management
+- React-Router version 6
