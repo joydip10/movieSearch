@@ -1,0 +1,2 @@
+export const ADD_SEARCH_TEXT="ADD_SEARCH_TEXT";
+export const HANDLE_ROUTE="HANDLE_ROUTE";
